@@ -4,14 +4,12 @@
   font-family: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-*,
-*::before,
-*::after {
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
   box-sizing: inherit;
 }
 
-html,
-body {
+html, body {
   height: 100%;
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -234,6 +232,7 @@ body {
 a {
   text-decoration: none;
   color: #2605f0;
+  -webkit-transition: .1s;
   transition: .1s
 }
 
@@ -257,11 +256,11 @@ a:hover {
   color: #fff;
 }
 
-.header,
-.creator {
+.header, .creator {
   min-height: 100vh;
   width: 100%;
   padding: 100px 0 100px 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   position: absolute;
   top: 0;
@@ -276,21 +275,42 @@ a:hover {
 }
 
 .creator--block {
+  -webkit-animation-name: creator;
   animation-name: creator;
+  -webkit-animation-duration: 7s;
   animation-duration: 7s;
+  -webkit-animation-fill-mode: backwards;
   animation-fill-mode: backwards;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
 
-
-@keyframes creator {
+@-webkit-keyframes creator {
   0% {
+    -webkit-transform: translateY(20px);
     transform: translateY(20px);
   }
   50% {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
   100% {
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+}
+
+@keyframes creator {
+  0% {
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+  50% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(20px);
     transform: translateY(20px);
   }
 }
@@ -316,6 +336,7 @@ a:hover {
   margin: 5px;
   padding: 10px 20px;
   cursor: pointer;
+  -webkit-transition: .3s;
   transition: .3s;
   cursor: pointer;
 }
@@ -341,40 +362,76 @@ a:hover {
 }
 
 .flowzin-left .flow {
+  -webkit-animation-name: flow;
   animation-name: flow;
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
+  -webkit-animation-fill-mode: backwards;
   animation-fill-mode: backwards;
+  -webkit-animation-delay: 1s;
   animation-delay: 1s;
+}
+
+@-webkit-keyframes flow {
+  from {
+    -webkit-transform: translateY(100vh);
+    transform: translateY(100vh);
+  }
 }
 
 @keyframes flow {
   from {
+    -webkit-transform: translateY(100vh);
     transform: translateY(100vh);
   }
 }
 
 .flowzin-top .flow {
+  -webkit-animation-name: flowTop;
   animation-name: flowTop;
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
+  -webkit-animation-fill-mode: backwards;
   animation-fill-mode: backwards;
+  -webkit-animation-delay: .5s;
   animation-delay: .5s;
+}
+
+@-webkit-keyframes flowTop {
+  from {
+    -webkit-transform: translateY(-100vh);
+    transform: translateY(-100vh);
+  }
 }
 
 @keyframes flowTop {
   from {
+    -webkit-transform: translateY(-100vh);
     transform: translateY(-100vh);
   }
 }
 
 .flowzin-right .flow {
+  -webkit-animation-name: flowRight;
   animation-name: flowRight;
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
+  -webkit-animation-fill-mode: backwards;
   animation-fill-mode: backwards;
+  -webkit-animation-delay: 1s;
   animation-delay: 1s;
+}
+
+@-webkit-keyframes flowRight {
+  from {
+    -webkit-transform: translateY(-100vh);
+    transform: translateY(-100vh);
+  }
 }
 
 @keyframes flowRight {
   from {
+    -webkit-transform: translateY(-100vh);
     transform: translateY(-100vh);
   }
 }
@@ -386,8 +443,7 @@ a:hover {
   margin: none
 }
 
-.flowzin-left .flow,
-.flowzin-right .flow {
+.flowzin-left .flow, .flowzin-right .flow {
   height: 100px;
   width: 10px;
 }
@@ -407,15 +463,27 @@ a:hover {
   width: 30px;
   height: 20px;
   cursor: pointer;
+  -webkit-animation-name: showMenuHamburger;
   animation-name: showMenuHamburger;
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
+  -webkit-animation-fill-mode: backwards;
   animation-fill-mode: backwards;
+  -webkit-animation-delay: 2.5s;
   animation-delay: 2.5s;
+}
 
+@-webkit-keyframes showMenuHamburger {
+  from {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px)
+  }
+  to {}
 }
 
 @keyframes showMenuHamburger {
   from {
+    -webkit-transform: translateX(100px);
     transform: translateX(100px)
   }
   to {}
@@ -427,16 +495,19 @@ a:hover {
   margin-bottom: 5px;
   background: #fff;
   border-radius: 3px;
+  -webkit-transition: .1s;
   transition: .1s
 }
 
 .menu:hover .item-menu {
   background: #2605f0;
+  -webkit-transform: scale(1.1, 1.1);
   transform: scale(1.1, 1.1);
 }
 
 .content {
   min-height: 100vh;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   background: #fff;
   z-index: 2
@@ -444,6 +515,7 @@ a:hover {
 
 .content .head {
   /*position: fixed;*/
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 30px;
   box-sizing: border-box;
@@ -473,9 +545,19 @@ a:hover {
   left: 0;
   background: #2605f0;
   z-index: 4;
+  -webkit-animation-name: bluezera;
   animation-name: bluezera;
+  -webkit-animation-duration: 1.5s;
   animation-duration: 1.5s;
+  -webkit-animation-fill-mode: backwards;
   animation-fill-mode: backwards;
+}
+
+@-webkit-keyframes bluezera {
+  from {
+    height: 100%
+  }
+  to {}
 }
 
 @keyframes bluezera {
@@ -484,7 +566,6 @@ a:hover {
   }
   to {}
 }
-
 
 .item-menu-resume {
   background: #000!important
@@ -496,8 +577,6 @@ a:hover {
 
 .bg-color {
   background: #fff;
-  overflow: hidden;
-
 }
 
 .creator-resume {
@@ -520,10 +599,10 @@ a:hover {
   min-height: 250px;
 }
 
-
 .resume {
   padding: 30px;
   padding-top: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -548,13 +627,26 @@ a:hover {
 }
 
 .animation-top {
+  -webkit-animation-name: showTop;
   animation-name: showTop;
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
+  -webkit-animation-fill-mode: backwards;
   animation-fill-mode: backwards;
+}
+
+@-webkit-keyframes showTop {
+  from {
+    -webkit-transform: translateY(100vh);
+    transform: translateY(100vh);
+    opacity: 0
+  }
+  to {}
 }
 
 @keyframes showTop {
   from {
+    -webkit-transform: translateY(100vh);
     transform: translateY(100vh);
     opacity: 0
   }
@@ -562,13 +654,26 @@ a:hover {
 }
 
 .animation-right {
+  -webkit-animation-name: showRight;
   animation-name: showRight;
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
+  -webkit-animation-fill-mode: backwards;
   animation-fill-mode: backwards;
+}
+
+@-webkit-keyframes showRight {
+  from {
+    -webkit-transform: translateX(-100vh);
+    transform: translateX(-100vh);
+    opacity: 0
+  }
+  to {}
 }
 
 @keyframes showRight {
   from {
+    -webkit-transform: translateX(-100vh);
     transform: translateX(-100vh);
     opacity: 0
   }
@@ -576,13 +681,26 @@ a:hover {
 }
 
 .animation-left {
+  -webkit-animation-name: showLeft;
   animation-name: showLeft;
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
+  -webkit-animation-fill-mode: backwards;
   animation-fill-mode: backwards;
+}
+
+@-webkit-keyframes showLeft {
+  from {
+    -webkit-transform: translateX(100vh);
+    transform: translateX(100vh);
+    opacity: 0
+  }
+  to {}
 }
 
 @keyframes showLeft {
   from {
+    -webkit-transform: translateX(100vh);
     transform: translateX(100vh);
     opacity: 0
   }
@@ -590,13 +708,26 @@ a:hover {
 }
 
 .animation-bottom {
+  -webkit-animation-name: showBottom;
   animation-name: showBottom;
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
+  -webkit-animation-fill-mode: backwards;
   animation-fill-mode: backwards;
+}
+
+@-webkit-keyframes showBottom {
+  from {
+    -webkit-transform: translateY(100vh);
+    transform: translateY(100vh);
+    opacity: 0
+  }
+  to {}
 }
 
 @keyframes showBottom {
   from {
+    -webkit-transform: translateY(100vh);
     transform: translateY(100vh);
     opacity: 0
   }
@@ -604,46 +735,57 @@ a:hover {
 }
 
 .animation-delay-1 {
+  -webkit-animation-delay: 1s;
   animation-delay: 1s
 }
 
 .animation-delay-2 {
+  -webkit-animation-delay: 2s;
   animation-delay: 2s
 }
 
 .animation-delay-3 {
+  -webkit-animation-delay: 3s;
   animation-delay: 3s
 }
 
 .animation-delay-01 {
+  -webkit-animation-delay: 0.1s;
   animation-delay: 0.1s
 }
 
 .animation-delay-02 {
+  -webkit-animation-delay: 0.2s;
   animation-delay: 0.2s
 }
 
 .animation-delay-03 {
+  -webkit-animation-delay: 0.3s;
   animation-delay: 0.3s
 }
 
 .animation-delay-04 {
+  -webkit-animation-delay: 0.4s;
   animation-delay: 0.4s
 }
 
 .animation-delay-05 {
+  -webkit-animation-delay: 0.5s;
   animation-delay: 0.5s
 }
 
 .animation-delay-15 {
+  -webkit-animation-delay: 1.5s;
   animation-delay: 1.5s
 }
 
 .animation-delay-25 {
+  -webkit-animation-delay: 2.5s;
   animation-delay: 2.5s
 }
 
 .animation-delay-35 {
+  -webkit-animation-delay: 3.5s;
   animation-delay: 3.5s
 }
 
@@ -654,6 +796,7 @@ a:hover {
 }
 
 .resume--block .container {
+  -webkit-transition: .1s;
   transition: .1s;
   padding-left: 20px;
   border-left: 5px solid #fff;
@@ -726,9 +869,7 @@ a:hover {
   .resume--block p {
     font-size: 14px;
   }
-
 }
-
 
 @media screen and (max-width: 470px) {
   .resume-left {
@@ -770,4 +911,57 @@ a:hover {
 
 .name a {
   color: #000
+}
+
+.title-blue {
+  color: #2605f0!important;
+  font-size: 2rem
+}
+
+.container-sticky {
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.block {
+  width: 100%;
+  /*background: #f4f4f4;*/
+  height: 100vh;
+  margin: 10px;
+  position: relative;
+  z-index: 1
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: #fff;
+  text-align: right;
+  width: 100%;
+  color: #2605f0;
+  height: 70px;
+}
+
+.hidden {
+  overflow: hidden;
+}
+
+.head-portfolio {
+  margin-bottom: 0!important
 }

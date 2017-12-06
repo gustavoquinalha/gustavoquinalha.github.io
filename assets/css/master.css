@@ -532,6 +532,10 @@ a:hover {
   margin-right: 20px;
 }
 
+.head2 {
+  background: transparent!important;
+}
+
 .content .head .title {
   font-size: 2rem;
   color: #2605f0;
@@ -1000,4 +1004,12 @@ a:hover {
 
 .block-img-social a:hover {
   filter: grayscale(100%);
+}
+
+.frase {
+  min-height: 100vh;
+  background: #2605f0;
+  padding: 50px;
+  box-sizing: border-box;
+  color: #fff;
 }

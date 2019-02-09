@@ -1,97 +1,55 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Gustavo Quinalha - User Interface Designer & Front-end Developer</title>
-    <link rel="stylesheet" href="assets/css/master.css">
-    <link rel="stylesheet" href="assets/css/the-grid.min.css">
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+  <title>Gustavo Quinalha - User Interface Designer & Front-end Developer</title>
+  <link rel="stylesheet" href="assets/css/master.css">
+  <link rel="stylesheet" href="assets/css/odyssey.css">
+</head>
 
-  <body>
-    <div class="header container align-items-center justify-content-center">
+<body>
+  <header>
+    <div class="container-bg" id="cntr"></div>
 
-      <div class="flowzin flowzin-top container align-items-center justify-content-center">
-        <div class="flow">
-        </div>
-      </div>
-
-      <div class="flowzin flowzin-right container align-items-center justify-content-center">
-        <div class="flow">
-        </div>
-      </div>
-
-      <div class="flowzin flowzin-left container align-items-center justify-content-center">
-        <div class="flow">
-        </div>
-      </div>
-
-      <div class="blue"></div>
-
-      <div class="social container align-items-center justify-content-center">
-        <div class="block-img-social animation-bottom animation-delay-05">
-          <a href="https://www.behance.net/gustavoquinalha" target="_blank">
-            <img src="./assets/images/social/behance.svg" width="30" alt="">
-          </a>
-        </div>
-        <div class="block-img-social animation-bottom animation-delay-06">
-          <a href="https://github.com/gustavoquinalha/" target="_blank">
-            <img src="./assets/images/social/github.svg" width="30" alt="">
-          </a>
-        </div>
-        <div class="block-img-social animation-bottom animation-delay-07">
-          <a href="https://codepen.io/gustavoquinalha/" target="_blank">
-            <img src="./assets/images/social/codepen.svg" width="30" alt="">
-          </a>
-        </div>
-        <div class="block-img-social animation-bottom animation-delay-08">
-          <a href="https://www.linkedin.com/in/gustavo-quinalha-2a6b83101/" target="_blank">
-            <img src="./assets/images/social/linkedin.svg" width="30" alt="">
-          </a>
-        </div>
-        <div class="block-img-social animation-bottom animation-delay-09">
-          <a href="https://twitter.com/gustavoquinalha" target="_blank">
-            <img src="./assets/images/social/twitter.svg" width="30" alt="">
-          </a>
-        </div>
-        <div class="block-img-social animation-bottom animation-delay-1">
-          <a href="https://www.facebook.com/gquinalha" target="_blank">
-            <img src="./assets/images/social/facebook.svg" width="30" alt="">
-          </a>
-        </div>
-      </div>
-
-      <!-- <div class="menu">
-      <div class="item-menu item-menu-1"></div>
-      <div class="item-menu item-menu-2"></div>
-      <div class="item-menu item-menu-3"></div>
-    </div> -->
-
-      <div class="header--block container column">
-        <span class="name animation-right animation-delay-05">Gustavo Quinalha</span>
-        <span class="title animation-left animation-delay-05">User Interface Designer & Front-end Developer.</span>
-        <!-- <div class="container container--buttons">
-          <a href="curriculo.html" class="btn animation-bottom animation-delay-1">CURRÍCULO</a>
-          <a href="portfolio.html" class="btn animation-bottom animation-delay-15">PORTFÓLIO</a>
-        </div> -->
+    <div class="container align-center header">
+      <div class="size margin header-content">
+        <h1>Gustavo Quinalha</h1>
+        <p>UI/UX Designer & Front-end Developer</p>
       </div>
     </div>
-    <div class="creator container align-items-center justify-content-center">
-      <div class="creator--block">
-        <span>CREATOR</span>
+
+    <div class="container contact">
+      <div class="size margin">
+        <h2>Contact</h2>
+        <ul class="list">
+          <li><a href="https://github.com/gustavoquinalha/" target="_blank">Github</a></li>
+          <li><a href="https://dribbble.com/gustavoquinalha" target="_blank">Dribbble</a></li>
+          <li><a href="https://www.behance.net/gustavoquinalha" target="_blank">Behance</a></li>
+          <li><a href="https://codepen.io/gustavoquinalha/" target="_blank">Codepen</a></li>
+          <li><a href="https://twitter.com/gustavoquinalha" target="_blank">Twitter</a></li>
+          <li><a href="https://www.linkedin.com/in/gustavoquinalha/" target="_blank">Linkedin</a></li>
+          <li><a href="https://www.instagram.com/gustavoquinalha/" target="_blank">Instagram</a></li>
+        </ul>
       </div>
     </div>
-    
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-88441841-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+  </header>
 
-      gtag('config', 'UA-88441841-1');
-    </script>
-  </body>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-88441841-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-88441841-1');
+  </script>
+  <script src="assets/js/main.js"></script>
+</body>
 
 </html>

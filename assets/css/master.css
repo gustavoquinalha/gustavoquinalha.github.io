@@ -2,15 +2,16 @@
   position: fixed;
   top: 0;
   left: 0;
-  color: #fff;
-  display: grid;
   width: 100%;
   height: 100vh;
   box-sizing: border-box;
-  grid-template-columns: repeat(10, auto);
-  grid-template-rows: repeat(10, auto);
   z-index: -1;
   overflow: hidden;
+  background: black;
+  /* background: url('../images/bg.png');
+  background-position: center center;
+  background-size: cover;
+  filter: brightness(0.3); */
 }
 
 .item {
@@ -29,16 +30,6 @@
   width: 100%;
 }
 
-.header p,
-.contact ul {
-  text-shadow: 0 35px #121415;
-}
-
-.header h1,
-.contact h2 {
-  text-shadow: 0 -45px #121415;
-}
-
 .contact {
   overflow: hidden;
 }
@@ -46,7 +37,7 @@
 .contact,
 .header-content {
   text-align: left;
-  padding: 100px 0;
+  padding: 50px 0;
 }
 
 a {
@@ -68,4 +59,29 @@ a:hover {
   .contact h2 {
     text-shadow: none;
   }
+}
+
+.list {
+  margin-top: 0;
+}
+
+.tag {
+  width: 90px;
+  max-width: 100%;
+  margin-bottom: 50px;
+}
+
+.bg {
+  width: 900px;
+  max-width: 90%;
+  margin-bottom: 50px;
+  border: 20px solid white;
+}
+
+p,a {
+  word-break: break-all;
+}
+
+.text-center {
+  text-align: center;
 }

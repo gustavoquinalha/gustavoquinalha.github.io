@@ -2,75 +2,171 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>gus - take the vision</title>
-  <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
-  <link rel="icon" type="image/png" href="favicon.ico"/>
-  <meta name="description" content="take the vision">
-  <meta name="author" content="gustavoquinalha">
-  <meta itemprop="name" content="Cortecloud">
-  <meta itemprop="description" content="take the vision">
-  <meta itemprop="image" content="https://gus.vision/assets/images/intro.jpg">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="gus">
-  <meta property="og:url" content="https://gus.vision/">
-  <meta property="og:site_name" content="gus">
-  <meta property="og:image" content="https://gus.vision/assets/images/intro.jpg">
-  <meta property="og:description" content="take the vision">
-  <meta property="og:locale" content="pt_Br">
-  <meta name="twitter:card" content="App">
-  <meta name="twitter:title" content="gus">
-  <meta name="twitter:description" content="take the vision">
-  <meta name="twitter:creator" content="gustavoquinalha">
-  <meta name="twitter:image" content="https://gus.vision/assets/images/intro.jpg">
-  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/odyssey.css">
-  <link rel="stylesheet" href="assets/css/master.css">
+  <meta http-equiv="Content-Type"
+    content="text/html; charset=utf-8" />
+
+  <title>gus</title>
+  <link rel="shortcut icon"
+    href="/favicon.ico"
+    type="image/x-icon">
+  <link rel="icon"
+    href="/favicon.ico"
+    type="image/x-icon">
+  <link rel="shortcut icon"
+    type="image/png"
+    href="favicon.ico" />
+  <link rel="icon"
+    type="image/png"
+    href="favicon.ico" />
+  <meta name="description"
+    content="take the vision">
+  <meta name="author"
+    content="gustavoquinalha">
+  <meta itemprop="name"
+    content="Cortecloud">
+  <meta itemprop="description"
+    content="take the vision">
+  <meta itemprop="image"
+    content="https://gus.vision/intro.jpg">
+  <meta property="og:type"
+    content="website">
+  <meta property="og:title"
+    content="gus">
+  <meta property="og:url"
+    content="https://gus.vision/">
+  <meta property="og:site_name"
+    content="gus">
+  <meta property="og:image"
+    content="https://gus.vision/intro.jpg">
+  <meta property="og:description"
+    content="take the vision">
+  <meta property="og:locale"
+    content="pt_Br">
+  <meta name="twitter:card"
+    content="App">
+  <meta name="twitter:title"
+    content="gus">
+  <meta name="twitter:description"
+    content="take the vision">
+  <meta name="twitter:creator"
+    content="gustavoquinalha">
+  <meta name="twitter:image"
+    content="https://gus.vision/intro.jpg">
+
+  <!-- Babylon.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.2/dat.gui.min.js"></script>
+  <script src="https://preview.babylonjs.com/ammo.js"></script>
+  <script src="https://preview.babylonjs.com/cannon.js"></script>
+  <script src="https://preview.babylonjs.com/Oimo.js"></script>
+  <script src="https://preview.babylonjs.com/earcut.min.js"></script>
+  <script src="https://preview.babylonjs.com/babylon.js"></script>
+  <script src="https://preview.babylonjs.com/materialsLibrary/babylonjs.materials.min.js"></script>
+  <script
+    src="https://preview.babylonjs.com/proceduralTexturesLibrary/babylonjs.proceduralTextures.min.js"></script>
+  <script
+    src="https://preview.babylonjs.com/postProcessesLibrary/babylonjs.postProcess.min.js"></script>
+  <script src="https://preview.babylonjs.com/loaders/babylonjs.loaders.js"></script>
+  <script src="https://preview.babylonjs.com/serializers/babylonjs.serializers.min.js"></script>
+  <script src="https://preview.babylonjs.com/gui/babylon.gui.min.js"></script>
+  <script src="https://preview.babylonjs.com/inspector/babylon.inspector.bundle.js"></script>
+
+  <style>
+    html,
+    body {
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    #renderCanvas {
+      width: 100%;
+      height: 100%;
+      touch-action: none;
+    }
+  </style>
 </head>
 
 <body>
-  <header>
-    <div class="container-bg" id="cntr"></div>
+  <canvas id="renderCanvas"></canvas>
 
-    <div class="container align-center header">
-      <div class="size margin header-content">
-        <h1>Gustavo Quinalha</h1>
-        <p>Derveloper</p>
-      </div>
-    </div>
-
-    <div class="container contact">
-      <div class="size margin">
-        <h2>Contact</h2>
-        <ul class="list">
-          <li><a href="https://github.com/gustavoquinalha" target="_blank">Github</a></li>
-          <li><a href="https://dribbble.com/gustavoquinalha" target="_blank">Dribbble</a></li>
-          <li><a href="https://www.behance.net/gustavoquinalha" target="_blank">Behance</a></li>
-          <li><a href="https://codepen.io/gustavoquinalha" target="_blank">Codepen</a></li>
-          <li><a href="https://twitter.com/gustavoquinalha" target="_blank">Twitter</a></li>
-          <li><a href="https://www.linkedin.com/in/gustavoquinalha" target="_blank">Linkedin</a></li>
-          <li><a href="https://www.instagram.com/gustavoquinalha" target="_blank">Instagram</a></li>
-          <li><a href="https://rarible.com/guss" target="_blank">Rarible</a></li>
-          
-        </ul>
-      </div>
-    </div>
-  </header>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-88441841-1"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
+    var canvas = document.getElementById("renderCanvas");
 
-    function gtag() {
-      dataLayer.push(arguments);
+    var startRenderLoop = function (engine, canvas) {
+      engine.runRenderLoop(function () {
+        if (sceneToRender && sceneToRender.activeCamera) {
+          sceneToRender.render();
+        }
+      });
     }
-    gtag('js', new Date());
 
-    gtag('config', 'UA-88441841-1');
+    var engine = null;
+    var scene = null;
+    var sceneToRender = null;
+    var createDefaultEngine = function () { return new BABYLON.Engine(canvas, true, { preserveDrawingBuffer: true, stencil: true, disableWebGL2Support: false }); };
+    var createScene = function () {
+
+      // Create the scene space
+      var scene = new BABYLON.Scene(engine);
+      scene.clearColor = BABYLON.Color3.Black();
+
+      // Add a camera to the scene and attach it to the canvas
+      var camera = new BABYLON.ArcRotateCamera("Camera", Math.PI / 4, Math.PI / 2, 1.5, BABYLON.Vector3.Zero(), scene);
+      camera.attachControl(canvas, true);
+
+      camera.lowerRadiusLimit = 1;
+      camera.upperRadiusLimit = 10;
+      camera.useAutoRotationBehavior = true;
+      camera.autoRotationBehavior.idleRotationSpeed = 1.5;
+      camera.angularSensibilityX = 2000;
+      camera.angularSensibilityY = 2000;
+
+      // Add lights to the scene
+      var light1 = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(1, 10, 0), scene);
+      // var light2 = new BABYLON.PointLight("light2", new BABYLON.Vector3(0, 1, -1), scene);
+
+      // Add and manipulate meshes in the scene
+      //split image between sides
+      var f = new BABYLON.Vector4(0, 0, 1, 1); // front image = half the whole image along the width 
+      var b = new BABYLON.Vector4(0, 0, 1, 1); // back image = second half along the width 
+
+      var sphere = BABYLON.MeshBuilder.CreateSphere("sphere", { sideOrientation: BABYLON.Mesh.DOUBLESIDE, frontUVs: f, backUVs: b }, scene);
+
+      var mat = new BABYLON.StandardMaterial("", scene);
+      mat.diffuseTexture = new BABYLON.Texture("./textures/ball.png", scene);
+      sphere.material = mat;
+
+      return scene;
+    };
+
+    window.initFunction = async function () {
+      var asyncEngineCreation = async function () {
+        try {
+          return createDefaultEngine();
+        } catch (e) {
+          console.log("the available createEngine function failed. Creating the default engine instead");
+          return createDefaultEngine();
+        }
+      }
+
+      window.engine = await asyncEngineCreation();
+
+      if (!engine) throw 'engine should not be null.';
+      startRenderLoop(engine, canvas);
+      window.scene = createScene();
+    };
+
+    initFunction().then(() => {
+      sceneToRender = scene
+    });
+
+    // Resize
+    window.addEventListener("resize", function () {
+      engine.resize();
+    });
   </script>
-  <script src="assets/js/main.js"></script>
 </body>
 
 </html>

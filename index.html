@@ -78,6 +78,7 @@
       height: 100%;
       margin: 0;
       padding: 0;
+      background: red;
     }
 
     #renderCanvas {
@@ -112,19 +113,22 @@
       var scene = new BABYLON.Scene(engine);
       scene.clearColor = BABYLON.Color3.Black();
 
+      // const ground = BABYLON.MeshBuilder.CreateGround("ground", { width: 1, height: 1 });
+
       // Add a camera to the scene and attach it to the canvas
       var camera = new BABYLON.ArcRotateCamera("Camera", Math.PI / 4, Math.PI / 2, 1.5, BABYLON.Vector3.Zero(), scene);
       camera.attachControl(canvas, true);
 
-      camera.lowerRadiusLimit = 1;
-      camera.upperRadiusLimit = 10;
+      // Animation
       camera.useAutoRotationBehavior = true;
       camera.autoRotationBehavior.idleRotationSpeed = 1.5;
       camera.angularSensibilityX = 2000;
       camera.angularSensibilityY = 2000;
 
+      // camera.setPosition(new BABYLON.Vector3(2, 1, 1));
+
       // Add lights to the scene
-      var light1 = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(1, 10, 0), scene);
+      var light1 = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(0, 1, 0), scene);
       // var light2 = new BABYLON.PointLight("light2", new BABYLON.Vector3(0, 1, -1), scene);
 
       // Add and manipulate meshes in the scene

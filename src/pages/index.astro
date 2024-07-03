@@ -108,13 +108,13 @@ const products = [
     name: 'Boné Gus.vision - Preto',
     link: 'https://shop.gus.vision/produtos/bone-correria-desde-1996-preto/',
     price: '100',
-    image: '/bone-preto.png',
+    image: '/bone-preto.webp',
   },
   {
     name: 'Boné Gus.vision - Amarelo',
     link: 'https://shop.gus.vision/produtos/bone-correria-desde-1996-amarelo/',
     price: '100',
-    image: '/bone-amarelo.png',
+    image: '/bone-amarelo.webp',
   },
 ];
 
@@ -170,7 +170,7 @@ const iconMap = {
       <a href="#products" class="text-zinc-400 hover:text-zinc-50 h-10 text-sm px-3 md:px-5 py-3 flex items-center justify-center">Products</a>
       <a href="#contact" class="text-zinc-400 hover:text-zinc-50 h-10 text-sm px-3 md:px-5 py-3 flex items-center justify-center">Contact</a>
     </div>
-    <a href="https://github.com/gustavoquinalha" target="_blank" title="Fork me!" class="hidden md:flex whitespace-nowrap bg-zinc-900 shadow border border-zinc-800 hover:border-zinc-700 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-50 rounded-xl h-10 px-4 text-sm items-center justify-center gap-2">
+    <a href="https://github.com/gustavoquinalha/gustavoquinalha.github.io/fork" target="_blank" title="Fork me!" class="hidden md:flex whitespace-nowrap bg-zinc-900 shadow border border-zinc-800 hover:border-zinc-700 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-50 rounded-xl h-10 px-4 text-sm items-center justify-center gap-2">
       <GithubIcon size={20} strokeWidth={1} />
       <span class="">Fork me!</span>
     </a>
@@ -178,9 +178,26 @@ const iconMap = {
 
   <div class="p-4 w-full flex flex-col max-w-4xl mx-auto">
     <div class="flex flex-col items-center gap-4 rounded-xl">
-      <div class="w-32 h-32 min-w-32 bg-zinc-800 rounded-full mx-auto border border-zinc-600 overflow-hidden shadow">
-        <img src="/me.jpg" class="w-32 h-32 min-w-32 object-cover object-center grayscale hover:grayscale-0" alt="" />
+      <div class="flip-card w-32 min-w-32 h-32">
+        <div class="flip-card-inner relative w-full h-full">
+          <div class="flip-card-front absolute w-full h-full">
+            <div class="w-32 h-32 min-w-32 bg-zinc-800 rounded-full mx-auto border border-zinc-600 overflow-hidden shadow">
+              <img src="/me.webp" class="w-32 h-32 min-w-32 object-cover object-center grayscale" alt="" />
+            </div>
+          </div>
+
+          <div class="flip-card-back absolute w-full h-full">
+            <div class="w-32 h-32 min-w-32 bg-zinc-800 rounded-full mx-auto border border-zinc-600 overflow-hidden shadow">
+              <img src="/gus.webp" class="w-32 h-32 min-w-32 object-cover object-center" alt="" />
+            </div>
+          </div>
+        </div>
       </div>
+
+      <!-- <div class="w-32 h-32 min-w-32 bg-zinc-800 rounded-full mx-auto border border-zinc-600 overflow-hidden shadow">
+        <img src="/me.webp" class="w-32 h-32 min-w-32 object-cover object-center grayscale hover:grayscale-0" alt="" />
+      </div> -->
+
       <div class="w-full text-center">
         <span class="block font-medium text-2xl text-zinc-200">Gustavo Quinalha</span>
         <span class="block text-xs text-zinc-500">Software Engineer & UI/UX Designer</span>
@@ -353,3 +370,28 @@ const iconMap = {
     });
   }
 </script>
+
+<style>
+  .flip-card {
+    perspective: 1000px;
+  }
+
+  .flip-card-inner {
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .flip-card-back {
+    transform: rotateY(180deg);
+  }
+</style>

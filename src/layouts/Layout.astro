@@ -1,22 +1,32 @@
 ---
 import '@fontsource/geist-mono';
-
-interface Props {
-  title: string;
-}
-
-const { title } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quam deleniti odio soluta, ullam veritatis cumque pariatur aperiam exercitationem sunt unde amet recusandae ducimus vel, veniam corporis quas maiores animi." />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <title>Gustavo Quinalha - Software Engineer & UI/UX Designer</title>
+    <meta name="description" content="Tenho mais de 15 anos de experiência como Desenvolvedor Front-End, focado em UI/UX. Apaixonado por criar interfaces bonitas e funcionais. Louco por JavaScript e CSS, especialmente em animações que tornam a interação do usuário melhor." />
+    <meta name="theme-color" content="#09090b" />
+    <meta name="color-scheme" content="dark" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Gustavo Quinalha - Software Engineer & UI/UX Designer" />
+    <meta property="og:description" content="Tenho mais de 15 anos de experiência como Desenvolvedor Front-End, focado em UI/UX. Apaixonado por criar interfaces bonitas e funcionais. Louco por JavaScript e CSS, especialmente em animações que tornam a interação do usuário melhor." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image:alt" content="number zero" />
+    <meta property="og:image" content="https://gus.vision/gus.webp" />
+    <meta property="og:url" content="https://gus.vision/" />
+    <meta property="fb:app_id" content="739468404727575" />
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://gus.vision/" />
+    <meta property="twitter:title" content="Gustavo Quinalha - Software Engineer & UI/UX Designer" />
+    <meta property="twitter:description" content="Tenho mais de 15 anos de experiência como Desenvolvedor Front-End, focado em UI/UX. Apaixonado por criar interfaces bonitas e funcionais. Louco por JavaScript e CSS, especialmente em animações que tornam a interação do usuário melhor." />
+    <meta property="twitter:image" content="https://gus.vision/gus.webp" />
   </head>
   <body class="w-full content p-2 md:p-4 lg:p-10 flex flex-col gap-4 md:gap-10 bg-zinc-950 relative mb-20 md:mb-0" id="about">
     <slot />

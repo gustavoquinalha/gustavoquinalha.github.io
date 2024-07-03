@@ -1,0 +1,54 @@
+---
+import '@fontsource/geist-mono';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quam deleniti odio soluta, ullam veritatis cumque pariatur aperiam exercitationem sunt unde amet recusandae ducimus vel, veniam corporis quas maiores animi." />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="w-full content p-2 md:p-4 lg:p-10 flex flex-col gap-4 md:gap-10 bg-zinc-950 relative mb-20 md:mb-0" id="about">
+    <slot />
+  </body>
+</html>
+<style is:global>
+  :root {
+    color-scheme: dark;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Geist Mono', monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
+  html {
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  #menu ::-webkit-scrollbar {
+    @apply w-0 h-0 rounded-xl;
+  }
+</style>
+
+<script></script>

@@ -1,0 +1,355 @@
+---
+import { LinkedinIcon, GithubIcon, CodepenIcon, DribbbleIcon, InstagramIcon, TwitterIcon, PhoneIcon, ExternalLinkIcon, SendIcon } from 'astro-feather';
+import Layout from '../layouts/Layout.astro';
+
+const skills = ['Typescript', 'Javascript', 'HTML', 'CSS', 'Tailwind', 'Angular', 'Vue', 'Nuxt', 'Astro', 'Animation', 'Design', 'Responsive', 'Mobile', 'Ecommerce', 'Wordpress'];
+
+const career = [
+  {
+    date: 'Sep 2019 - Present · 4 yrs 11 mos',
+    title: 'Software Engineer',
+    company: 'Accountfy',
+    link: 'https://accountfy.com/',
+    description: ['Responsável pelo módulo de reports/notas explicativas', 'Descoberta de novas tecnologias', 'Tech lead'],
+  },
+  {
+    date: 'May 2018 - Aug 2019 · 1 yr 4 mos',
+    title: 'UI Designer & Front-End Developer',
+    company: 'Serrabits',
+    link: 'https://serrabits.com.br/',
+    description: ['Refatoração de componentes', 'Criação de Design Tokens', 'Criação do Design System', 'Implementação do Design System', 'Desenvolvimento de novas features', 'Identidade de novos produtos', 'Desenvolvimento do site', 'Pesquisas de UX em campo'],
+  },
+  {
+    date: 'Sep 2019 - Present · 4 yrs 11 mos',
+    title: 'UI Designer & Front-End Developer',
+    company: 'Monk',
+    link: 'https://serrabits.com.br/',
+    description: ['Desenvolvimento de ecommerce', 'Desenvolvimento de sites', 'Desenvolvimento de animações', 'Desenvolvimento de artes', 'Desenvolvimento do EAD'],
+  },
+];
+
+const projects = [
+  {
+    name: 'Dress Code Curitiba',
+    link: 'https://dresscodecuritiba.com.br/',
+    title: 'Front-End · UI/UX Design',
+    description: 'Alugue seu vestido de festa ideal em Curitiba. Grande variedade de estilos e tamanhos para todas as ocasiões. Garanta seu look perfeito!',
+  },
+  {
+    name: 'Bichinhos',
+    link: 'https://bichinhos.app/',
+    title: 'Front-End · UI/UX Design',
+    description: 'O jeito mais fofinho de adotar seu bichinho. Encontre bichinhos para adoção, ajude a encontrar bichinhos desaparecidos e mantenha seus bichinhos seguro.',
+  },
+  {
+    name: 'Let me pay',
+    link: 'https://letmepay.io/',
+    title: 'Front-End · UI/UX Design',
+    description: 'Pagamentos simplificados. Receba pagamentos e envie uma remessa utilizando nossas soluções.',
+  },
+  {
+    name: 'Gus.vision',
+    link: 'https://gus.vision/',
+    title: 'Front-End · UI/UX Design',
+    description: 'Correria desde 1996.',
+  },
+  {
+    name: 'Númeric0',
+    link: 'https://numeric0.com/',
+    title: 'Front-End · UI/UX Design',
+    description: 'Pensar, Desenhar, Desenvolver, Lançar, Repetir.',
+  },
+  {
+    name: 'Dr. Lucas Bittencourt',
+    link: 'https://drlucasbittencourt.com.br/',
+    title: 'Front-End · UI/UX Design',
+    description: 'O melhor amigo da saúde do homem e de uma vida sexual mais saudável e ativa.',
+  },
+  {
+    name: 'Seotopper',
+    link: 'https://gustavoquinalha.github.io/seotopper/',
+    title: 'Front-End · UI/UX Design',
+    description: 'Complete SEO generator with all meta-tags including JSON-LD, build your Seo in seconds.',
+  },
+  {
+    name: 'Design Tokens Generator',
+    link: 'https://gustavoquinalha.github.io/design-tokens-generator/',
+    title: 'Front-End · UI/UX Design',
+    description: 'Design tokens are the minimum elements of the design system.',
+  },
+  {
+    name: 'Sizify',
+    link: 'https://gustavoquinalha.github.io/sizify/',
+    title: 'Front-End · UI/UX Design',
+    description: 'A tool for preview changes and test on multiple devices instantly.',
+  },
+  {
+    name: 'Overleasy',
+    link: 'https://gus.vision/overleasy/',
+    title: 'Front-End · UI/UX Design',
+    description: 'With overleasy you can view your posts, covers, profile photos and much more.',
+  },
+  {
+    name: 'Jekyll Help Center Theme',
+    link: 'https://gustavoquinalha.github.io/jekyll-help-center-theme/',
+    title: 'Front-End · UI/UX Design',
+    description: 'Simple and responsive Jekyll theme for help center.',
+  },
+  {
+    name: 'cs2bombs',
+    link: 'https://cs2bombs.netlify.app/',
+    title: 'Front-End · UI/UX Design',
+    description: 'Learn how to do all CS2 utilities.',
+  },
+];
+
+const products = [
+  {
+    name: 'Boné Gus.vision - Preto',
+    link: 'https://shop.gus.vision/produtos/bone-correria-desde-1996-preto/',
+    price: '100',
+    image: '/bone-preto.png',
+  },
+  {
+    name: 'Boné Gus.vision - Amarelo',
+    link: 'https://shop.gus.vision/produtos/bone-correria-desde-1996-amarelo/',
+    price: '100',
+    image: '/bone-amarelo.png',
+  },
+];
+
+const socialMedia = [
+  {
+    link: 'https://wa.me/5544998027802',
+    icon: 'PhoneIcon',
+  },
+  {
+    link: 'https://www.linkedin.com/in/gustavoquinalha/',
+    icon: 'LinkedinIcon',
+  },
+  {
+    link: 'https://github.com/gustavoquinalha',
+    icon: 'GithubIcon',
+  },
+  {
+    link: 'https://codepen.com/gustavoquinalha',
+    icon: 'CodepenIcon',
+  },
+  {
+    link: 'https://dribbble.com/gustavoquinalha',
+    icon: 'DribbbleIcon',
+  },
+  {
+    link: 'https://instagram.com/gustavoquinalha',
+    icon: 'InstagramIcon',
+  },
+  {
+    link: 'https://twitter.com/gustavoquinalha',
+    icon: 'TwitterIcon',
+  },
+] as const;
+
+const iconMap = {
+  PhoneIcon,
+  LinkedinIcon,
+  GithubIcon,
+  CodepenIcon,
+  DribbbleIcon,
+  InstagramIcon,
+  TwitterIcon,
+} as const;
+---
+
+<Layout title="Gustavo Quinalha - Software Engineer & UI/UX Designer">
+  <div class="max-w-full w-full left-0 md:left-auto md:w-auto fixed md:sticky bottom-0 md:bottom-[initial] top-[initial] md:top-4 z-50 flex items-center gap-2 mx-auto" id="menu">
+    <div class="bg-zinc-900 shadow border border-zinc-800 rounded-none md:rounded-xl flex items-center text-center h-14 md:h-10 px-4 overflow-x-auto overflow-y-hidden w-full md:w-auto">
+      <a href="#about" class="text-zinc-400 hover:text-zinc-50 h-10 text-sm px-3 md:px-5 py-3 flex items-center justify-center">About</a>
+      <a href="#skills" class="text-zinc-400 hover:text-zinc-50 h-10 text-sm px-3 md:px-5 py-3 flex items-center justify-center">Skills</a>
+      <a href="#career" class="text-zinc-400 hover:text-zinc-50 h-10 text-sm px-3 md:px-5 py-3 flex items-center justify-center">Career</a>
+      <a href="#projects" class="text-zinc-400 hover:text-zinc-50 h-10 text-sm px-3 md:px-5 py-3 flex items-center justify-center">Projects</a>
+      <a href="#products" class="text-zinc-400 hover:text-zinc-50 h-10 text-sm px-3 md:px-5 py-3 flex items-center justify-center">Products</a>
+      <a href="#contact" class="text-zinc-400 hover:text-zinc-50 h-10 text-sm px-3 md:px-5 py-3 flex items-center justify-center">Contact</a>
+    </div>
+    <a href="https://github.com/gustavoquinalha" target="_blank" title="Fork me!" class="hidden md:flex whitespace-nowrap bg-zinc-900 shadow border border-zinc-800 hover:border-zinc-700 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-50 rounded-xl h-10 px-4 text-sm items-center justify-center gap-2">
+      <GithubIcon size={20} strokeWidth={1} />
+      <span class="">Fork me!</span>
+    </a>
+  </div>
+
+  <div class="p-4 w-full flex flex-col max-w-4xl mx-auto">
+    <div class="flex flex-col items-center gap-4 rounded-xl">
+      <div class="w-32 h-32 min-w-32 bg-zinc-800 rounded-full mx-auto border border-zinc-600 overflow-hidden shadow">
+        <img src="/me.jpg" class="w-32 h-32 min-w-32 object-cover object-center grayscale hover:grayscale-0" alt="" />
+      </div>
+      <div class="w-full text-center">
+        <span class="block font-medium text-2xl text-zinc-200">Gustavo Quinalha</span>
+        <span class="block text-xs text-zinc-500">Software Engineer & UI/UX Designer</span>
+      </div>
+      <div class="w-full max-w-xl text-center">
+        <span class="block font-normal text-sm text-zinc-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quam deleniti odio soluta, ullam veritatis cumque pariatur aperiam exercitationem sunt unde amet recusandae ducimus vel, veniam corporis quas maiores animi.</span>
+      </div>
+
+      <div class="flex flex-wrap justify-center items-center gap-2 pt-4">
+        {
+          socialMedia.map(({ link, icon }) => {
+            const IconComponent = iconMap[icon];
+            return (
+              <a href={link} target="_blank" class="bg-zinc-900 shadow border border-zinc-800 hover:border-zinc-700 hover:bg-zinc-800 text-zinc-300 hover:text-zinc-50 rounded-xl h-10 w-10 min-w-10 text-sm flex items-center justify-center gap-2">
+                <IconComponent size={20} strokeWidth={1} />
+              </a>
+            );
+          })
+        }
+      </div>
+    </div>
+
+    <div class="w-full pt-20" id="skills">
+      <span class="block font-medium text-xl text-zinc-200 mb-4">Skills</span>
+      <div class="w-full flex flex-wrap gap-1">
+        {skills.map((skill) => <div class="bg-zinc-800 text-zinc-300 text-xs inline-block rounded-lg px-3 py-2 leading-none">{skill}</div>)}
+      </div>
+    </div>
+
+    <div class="w-full pt-20" id="career">
+      <span class="block font-medium text-xl text-zinc-200 mb-4">Carrer e Works</span>
+      <div class="w-full flex flex-col">
+        {
+          career.map((data) => (
+            <div class="w-full flex flex-col gap-1 pl-8 pb-14 last:pb-0 border-l last:border-transparent border-zinc-500 relative">
+              <div class="flex w-4 min-w-4 h-4 bg-zinc-500 rounded-full absolute -left-2" />
+              <span class="block text-xs text-zinc-500">{data.date}</span>
+              <span class="text-lg text-zinc-200">{data.title}</span>
+              <div class="text-lg text-zinc-200">
+                <div class="inline">
+                  <a href={data.link} target="_blank" class="inline text-sm text-zinc-200 hover:text-zinc-50 hover:underline underline-offset-1">
+                    {data.company}
+                  </a>
+                </div>
+                {/* <span class="bg-zinc-800 text-zinc-300 text-xs inline-block rounded-full px-2 pt-2 pb-1 leading-none">Current</span> */}
+              </div>
+              <ul class="list-disc block text-sm text-zinc-400 mt-2 pl-4">
+                {data.description.map((description) => (
+                  <li>{description}</li>
+                ))}
+              </ul>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="w-full pt-20" id="projects">
+      <span class="block font-medium text-xl text-zinc-200 mb-4">Projects</span>
+      <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 flex-col gap-4">
+        {
+          projects.map((data) => (
+            <a href={data.link} target="_blank" class="group shadow w-full flex flex-col gap-4 py-4 md:py-8 px-4 md:px-6 border bg-zinc-900 border-zinc-800 hover:bg-zinc-800 hover:border-zinc-700 rounded-xl relative">
+              <div class="absolute top-0 right-0 p-2">
+                <ExternalLinkIcon size={20} strokeWidth={1} />
+              </div>
+              <div class="flex flex-col w-full gap-1">
+                <div class="block font-medium text-lg text-zinc-200 group-hover:text-zinc-50 group-hover:underline underline-offset-1 leading-5">{data.name}</div>
+                <div class="block font-medium text-sm text-zinc-500 gap-2 leading-4">{data.title}</div>
+              </div>
+              <div class="block font-medium text-sm leading-5 text-zinc-300 mt-2">{data.description}</div>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="w-full pt-20" id="products">
+      <span class="block font-medium text-xl text-zinc-200 mb-4">Products</span>
+      <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 flex-col gap-4">
+        {
+          products.map((data) => (
+            <a href={data.link} target="_blank" style={`background:  linear-gradient(rgba(9, 9, 11, 0.2), rgba(9, 9, 11, 0.6), rgba(9, 9, 11, 0.8)), url(${data.image})`} class="grayscale hover:grayscale-0 !bg-center !bg-cover group min-h-64 shadow w-full flex justify-end flex-col gap-4 py-4 md:py-8 px-4 md:px-6 border bg-zinc-900 border-zinc-800 hover:bg-zinc-800 hover:border-zinc-700 rounded-xl relative">
+              <div class="absolute top-0 right-0 p-2">
+                <ExternalLinkIcon size={20} strokeWidth={1} />
+              </div>
+              <div class="flex flex-col w-full gap-1">
+                <div class="block font-medium text-lg text-zinc-200 group-hover:text-zinc-50 group-hover:underline underline-offset-1 leading-5">{data.name}</div>
+                <div class="block font-medium text-sm text-zinc-400 gap-2 leading-4">R$ {data.price},00</div>
+              </div>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="w-full pt-20 flex flex-col gap-4" id="contact">
+      <div class="w-full flex flex-col items-center justify-center gap-2">
+        <div class="flex flex-wrap text-center items-center justify-center gap-4 w-full">
+          <span class="font-medium text-xl text-zinc-200">Hello, my name is</span>
+          <input class="appearance-none text-center border-b border-zinc-800 bg-zinc-950 max-w-80 w-full py-2 px-3 text-zinc-200" id="name" type="text" placeholder="Name" />
+        </div>
+        <div class="flex flex-wrap text-center items-center justify-center gap-4 w-full">
+          <span class="font-medium text-xl text-zinc-200">I'm from</span>
+          <input class="appearance-none text-center border-b border-zinc-800 bg-zinc-950 max-w-60 w-full py-2 px-3 text-zinc-200" id="city" type="text" placeholder="City" />
+        </div>
+      </div>
+
+      <div class="flex flex-wrap text-center items-center justify-center gap-4 w-full">
+        <span class="font-medium text-xl text-zinc-200">I would like to talk about</span>
+        <div class="relative w-full max-w-60">
+          <select class="appearance-none text-center border-b border-zinc-800 bg-zinc-950 w-full py-2 px-3 text-zinc-200" id="subject">
+            <option value="Budget">Budget</option>
+            <option value="New project">New project</option>
+            <option value="Doubts">Doubts</option>
+            <option value="Other">Other</option>
+          </select>
+          <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-zinc-500">
+            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+              <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col items-center justify-center gap-4 w-full max-w-xl mx-auto">
+        <!-- <span class="font-medium text-xl text-zinc-200">Message:</span> -->
+        <textarea name="message" placeholder="Message" id="message" rows="4" class="resize-none appearance-none text-center rounded-xl border border-zinc-800 bg-zinc-950 w-full py-2 px-3 text-zinc-200"></textarea>
+      </div>
+
+      <div class="w-full mt-4">
+        <button id="send" class="mx-auto bg-zinc-300 hover:bg-zinc-50 text-zinc-900 rounded-xl h-12 text-sm px-5 py-3 flex items-center justify-center gap-2">
+          <SendIcon size={18} strokeWidth={1} />
+          <span>Send message</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center w-full mt-10 flex flex-col items-center justify-center">
+    <div class="text-zinc-300 text-sm">©2024 • <a href="https://github.com/gustavoquinalha" target="_blank" class="text-zinc-300 hover:text-zinc-50 hover:underline underline-offset-1">Gustavo Quinalha</a> — Todos os direitos reservados.</div>
+    <div class="flex flex-wrap justify-center items-center gap-5 pt-4">
+      {
+        socialMedia.map(({ link, icon }) => {
+          const IconComponent = iconMap[icon];
+          return (
+            <a href={link} target="_blank" class=" text-zinc-400 hover:text-zinc-50 rounded-xl flex items-center justify-center gap-2">
+              <IconComponent size={20} strokeWidth={1} />
+            </a>
+          );
+        })
+      }
+    </div>
+  </div>
+</Layout>
+
+<script>
+  const whatsAppNumber = '5544998027802';
+
+  const btnSend = document.querySelector('#send');
+  if (btnSend) {
+    btnSend.addEventListener('click', function () {
+      const name: HTMLInputElement = document.querySelector('#name')!;
+      const city: HTMLInputElement = document.querySelector('#city')!;
+      const subject: HTMLInputElement = document.querySelector('#subject')!;
+      const message: HTMLInputElement = document.querySelector('#message')!;
+      const content = encodeURIComponent(`Hello, my name is *${name.value}*, I'm from *${city.value}*, I would like to talk about *${subject.value}*. Message: *${message.value}*`);
+      const urlWhatsApp = `https://wa.me/${whatsAppNumber}?text=${content}`;
+      window.open(urlWhatsApp);
+    });
+  }
+</script>

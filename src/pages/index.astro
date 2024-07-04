@@ -238,7 +238,6 @@ const iconMap = {
                     {data.company}
                   </a>
                 </div>
-                {/* <span class="bg-zinc-800 text-zinc-300 text-xs inline-block rounded-full px-2 pt-2 pb-1 leading-none">Current</span> */}
               </div>
               <ul class="list-disc block text-sm text-zinc-400 mt-2 pl-4">
                 {data.description.map((description) => (
@@ -320,7 +319,6 @@ const iconMap = {
       </div>
 
       <div class="flex flex-col items-center justify-center gap-4 w-full max-w-xl mx-auto">
-        <!-- <span class="font-medium text-xl text-zinc-200">Message:</span> -->
         <textarea name="message" placeholder="Message" id="message" rows="4" class="resize-none appearance-none text-center rounded-xl border border-zinc-800 bg-zinc-950 w-full py-2 px-3 text-zinc-200"></textarea>
       </div>
 
@@ -333,9 +331,9 @@ const iconMap = {
     </div>
   </div>
 
-  <div class="text-center w-full mt-10 flex flex-col items-center justify-center">
-    <div class="text-zinc-300 text-sm">©2024 • <a href="https://github.com/gustavoquinalha" target="_blank" class="text-zinc-300 hover:text-zinc-50 hover:underline underline-offset-1">Gustavo Quinalha</a> — Todos os direitos reservados.</div>
-    <div class="flex flex-wrap justify-center items-center gap-5 pt-4">
+  <div class="text-center w-full mt-10 flex gap-4 flex-col items-center justify-center">
+    <div class="text-zinc-300 text-sm">©2024 • <a href="https://github.com/gustavoquinalha" target="_blank" class="text-zinc-300 hover:text-zinc-50 hover:underline underline-offset-1">Gustavo Quinalha</a> — All rights reserved.</div>
+    <div class="flex flex-wrap justify-center items-center gap-5">
       {
         socialMedia.map(({ link, icon }) => {
           const IconComponent = iconMap[icon];
@@ -348,11 +346,15 @@ const iconMap = {
       }
     </div>
   </div>
+
+  <div class="min-h-10 w-full"></div>
+  <div class="bg-zinc-900 border-t border-zinc-800 px-8 absolute bottom-0 left-0 w-full text-center min-h-16 flex justify-center items-center">
+    <div class="text-zinc-300 text-xs">Template developed by <a href="https://github.com/gustavoquinalha" target="_blank" class="text-zinc-300 hover:text-zinc-50 hover:underline underline-offset-1">Gustavo Quinalha</a>, <a href="https://github.com/gustavoquinalha" target="_blank" class="text-zinc-300 hover:text-zinc-50 hover:underline underline-offset-1">Click here</a> to fork!</div>
+  </div>
 </Layout>
 
 <script>
   const whatsAppNumber = '5544998027802';
-
   const btnSend = document.querySelector('#send');
   if (btnSend) {
     btnSend.addEventListener('click', function () {

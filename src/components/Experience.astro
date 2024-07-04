@@ -12,7 +12,7 @@ const { items } = Astro.props as Props;
     items.map((data) => (
       <div class="w-full flex flex-col gap-1 pl-8 pb-14 last:pb-0 border-l last:border-transparent border-zinc-500 relative">
         <div class="flex w-4 min-w-4 h-4 bg-zinc-500 rounded-full absolute -left-2" />
-        <span class="block text-xs text-zinc-500">{data.date}</span>
+        <span class="block text-xs text-zinc-400">{data.date}</span>
         <span class="text-lg text-zinc-200">{data.title}</span>
         <a href={data.link} target="_blank" class="inline text-sm text-zinc-200 hover:text-zinc-50 hover:underline underline-offset-1">
           {data.company}

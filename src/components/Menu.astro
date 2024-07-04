@@ -14,15 +14,16 @@ import { GithubIcon } from 'astro-feather';
   const menu: any[] = [];
   const items: HTMLElement[] = Array.from(document.querySelectorAll('.title'));
   const menuItems: HTMLElement = document.querySelector('#menu-items')!;
+  const style = 'text-zinc-400 hover:text-zinc-50 h-10 text-sm px-3 md:px-4 py-3 flex items-center justify-center whitespace-nowrap';
 
-  menu.push('<a href="#about-me" class="text-zinc-400 hover:text-zinc-50 h-10 text-sm px-3 md:px-4 py-3 flex items-center justify-center">About me</a>');
+  menu.push(`<a href="#about-me" class="${style}">About me</a>`);
 
   items.forEach((item) => {
-    const link = `<a href="#${item.textContent?.toLowerCase().replace(' ', '-')}" class="text-zinc-400 hover:text-zinc-50 h-10 text-sm px-3 md:px-4 py-3 flex items-center justify-center">${item.textContent}</a>`;
+    const link = `<a href="#${item.textContent?.toLowerCase().replace(' ', '-')}" class="${style}">${item.textContent}</a>`;
     menu.push(link);
   });
 
-  menu.push('<a href="#contact" class="text-zinc-400 hover:text-zinc-50 h-10 text-sm px-3 md:px-4 py-3 flex items-center justify-center">Contact</a>');
+  menu.push(`<a href="#contact" class="${style}">Contact</a>`);
 
   menuItems.innerHTML = menu.toString().split(',').join('');
 </script>

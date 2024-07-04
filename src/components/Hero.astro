@@ -1,0 +1,108 @@
+---
+import { LinkedinIcon, GithubIcon, CodepenIcon, DribbbleIcon, InstagramIcon, TwitterIcon, PhoneIcon } from 'astro-feather';
+
+const socialMedia = [
+  {
+    link: 'https://wa.me/5544998027802',
+    icon: 'PhoneIcon',
+  },
+  {
+    link: 'https://www.linkedin.com/in/gustavoquinalha/',
+    icon: 'LinkedinIcon',
+  },
+  {
+    link: 'https://github.com/gustavoquinalha',
+    icon: 'GithubIcon',
+  },
+  {
+    link: 'https://codepen.com/gustavoquinalha',
+    icon: 'CodepenIcon',
+  },
+  {
+    link: 'https://dribbble.com/gustavoquinalha',
+    icon: 'DribbbleIcon',
+  },
+  {
+    link: 'https://instagram.com/gustavoquinalha',
+    icon: 'InstagramIcon',
+  },
+  {
+    link: 'https://twitter.com/gustavoquinalha',
+    icon: 'TwitterIcon',
+  },
+] as const;
+
+const iconMap = {
+  PhoneIcon,
+  LinkedinIcon,
+  GithubIcon,
+  CodepenIcon,
+  DribbbleIcon,
+  InstagramIcon,
+  TwitterIcon,
+} as const;
+---
+
+<div class="flex flex-col items-center gap-4 rounded-xl">
+  <div class="flip-card w-32 min-w-32 h-32">
+    <div class="flip-card-inner relative w-full h-full">
+      <div class="flip-card-front absolute w-full h-full">
+        <div class="w-32 h-32 min-w-32 bg-zinc-800 rounded-full mx-auto border border-zinc-600 overflow-hidden shadow">
+          <img src="/me.webp" class="w-32 h-32 min-w-32 object-cover object-center grayscale" alt="" />
+        </div>
+      </div>
+
+      <div class="flip-card-back absolute w-full h-full">
+        <div class="w-32 h-32 min-w-32 bg-zinc-800 rounded-full mx-auto border border-zinc-600 overflow-hidden shadow">
+          <img src="/gus.webp" class="w-32 h-32 min-w-32 object-cover object-center" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="w-full text-center">
+    <span class="block font-medium text-2xl text-zinc-200">Gustavo Quinalha</span>
+    <span class="block text-xs text-zinc-500">Software Engineer & UI/UX Designer</span>
+  </div>
+  <div class="w-full max-w-xl text-center">
+    <span class="block font-normal text-sm text-zinc-300">I have more than 15 years of experience as a Front-End Developer, focused on UI/UX. Passionate about creating beautiful and functional interfaces. Crazy about JavaScript and CSS, especially in animations that make user interaction better.</span>
+  </div>
+
+  <div class="flex flex-wrap justify-center items-center gap-2 pt-4">
+    {
+      socialMedia.map(({ link, icon }) => {
+        const IconComponent = iconMap[icon];
+        return (
+          <a href={link} target="_blank" class="bg-zinc-900 shadow border border-zinc-800 hover:border-zinc-700 hover:bg-zinc-800 text-zinc-300 hover:text-zinc-50 rounded-xl h-10 w-10 min-w-10 text-sm flex items-center justify-center gap-2">
+            <IconComponent size={20} strokeWidth={1} />
+          </a>
+        );
+      })
+    }
+  </div>
+</div>
+
+<style>
+  .flip-card {
+    perspective: 1000px;
+  }
+
+  .flip-card-inner {
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .flip-card-back {
+    transform: rotateY(180deg);
+  }
+</style>

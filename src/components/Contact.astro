@@ -6,17 +6,17 @@ import { SendIcon } from 'astro-feather';
   <div class="w-full pt-20 flex flex-col gap-4" id="contact">
     <div class="w-full flex flex-col items-center justify-center gap-2">
       <div class="flex flex-wrap text-center items-center justify-center gap-4 w-full">
-        <span class="font-medium text-xl text-zinc-200">Hello, my name is</span>
+        <label for="name" class="font-medium text-xl text-zinc-200">Hello, my name is</label>
         <input id="name" name="name" type="text" placeholder="Name" required class="appearance-none text-center focus:bg-zinc-950 focus:border-zinc-200 focus:outline-none focus:shadow-outline border-b border-zinc-800 bg-zinc-950 max-w-60 w-full py-2 px-3 text-zinc-200" />
       </div>
       <div class="flex flex-wrap text-center items-center justify-center gap-4 w-full">
-        <span class="font-medium text-xl text-zinc-200">I'm from</span>
+        <label for="city" class="font-medium text-xl text-zinc-200">I'm from</label>
         <input id="city" name="city" type="text" placeholder="City" required class="appearance-none text-center focus:bg-zinc-950 focus:border-zinc-200 focus:outline-none focus:shadow-outline border-b border-zinc-800 bg-zinc-950 max-w-80 w-full py-2 px-3 text-zinc-200" />
       </div>
     </div>
 
     <div class="flex flex-wrap text-center items-center justify-center gap-4 w-full">
-      <span class="font-medium text-xl text-zinc-200">I would like to talk about</span>
+      <label for="subject" class="font-medium text-xl text-zinc-200">I would like to talk about</label>
       <div class="relative w-full max-w-40">
         <select id="subject" name="subject" required class="appearance-none text-center focus:bg-zinc-950 focus:border-zinc-200 focus:outline-none focus:shadow-outline border-b border-zinc-800 bg-zinc-950 w-full py-2 px-3 text-zinc-200">
           <option value="Budget">Budget</option>
@@ -33,6 +33,7 @@ import { SendIcon } from 'astro-feather';
     </div>
 
     <div class="flex flex-col items-center justify-center gap-4 w-full max-w-xl mx-auto">
+      <label for="message" class="invisible font-medium text-xl text-zinc-200">I would like to talk about</label>
       <textarea required name="message" placeholder="Message" id="message" rows="4" class="resize-none appearance-none text-center focus:bg-zinc-950 focus:border-zinc-200 focus:outline-none focus:shadow-outline rounded-xl border border-zinc-800 bg-zinc-950 w-full py-2 px-3 text-zinc-200"></textarea>
     </div>
 

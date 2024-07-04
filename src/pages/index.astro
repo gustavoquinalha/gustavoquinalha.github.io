@@ -2,7 +2,7 @@
 import { LinkedinIcon, GithubIcon, CodepenIcon, DribbbleIcon, InstagramIcon, TwitterIcon, PhoneIcon, ExternalLinkIcon, SendIcon } from 'astro-feather';
 import Layout from '../layouts/Layout.astro';
 
-const skills = ['Typescript', 'Javascript', 'HTML', 'CSS', 'Tailwind', 'Angular', 'Vue', 'Nuxt', 'Astro', 'Animation', 'Design', 'Responsive', 'Mobile', 'Ecommerce', 'Wordpress'];
+const skills = ['TypeScript', 'JavaScript', 'HTML', 'CSS', 'Angular', 'Vue', 'Nuxt', 'User Interface Design', 'User Experience Design', 'Tailwind', 'Astro', 'GSAP', 'GreenSock', 'Animation', 'Design', 'Figma', 'Xd', 'Framer', 'Responsive', 'Mobile', 'Ecommerce', 'Wordpress', 'AngularJS', 'SASS', 'Prototype', 'Mockup', 'Web Design', 'Illustration', 'Photoshop', 'Illustrator', 'WYSIWYG', 'Document Editor', 'OnlyOffice', 'SpreadJS', 'AM Charts', 'Rich Text Editing', 'Chat GPT', 'Replicate', 'AI', 'Deploy', 'Github', 'Bitbucket', 'Jira', 'SCRUM'];
 
 const career = [
   {
@@ -219,7 +219,7 @@ const iconMap = {
     <div class="w-full pt-20" id="skills">
       <span class="block font-medium text-xl text-zinc-200 mb-4">Skills</span>
       <div class="w-full flex flex-wrap gap-1">
-        {skills.map((skill) => <div class="bg-zinc-800 text-zinc-300 text-xs inline-block rounded-lg px-3 py-2 leading-none">{skill}</div>)}
+        {skills.map((skill) => <div class="bg-zinc-800 text-zinc-300 text-xs inline-block rounded-lg px-2 py-1 leading-none">{skill}</div>)}
       </div>
     </div>
 
@@ -293,17 +293,17 @@ const iconMap = {
       <div class="w-full flex flex-col items-center justify-center gap-2">
         <div class="flex flex-wrap text-center items-center justify-center gap-4 w-full">
           <span class="font-medium text-xl text-zinc-200">Hello, my name is</span>
-          <input class="appearance-none text-center border-b border-zinc-800 bg-zinc-950 max-w-80 w-full py-2 px-3 text-zinc-200" id="name" type="text" placeholder="Name" />
+          <input class="appearance-none text-center border-b border-zinc-800 bg-zinc-950 max-w-60 w-full py-2 px-3 text-zinc-200" id="name" type="text" placeholder="Name" />
         </div>
         <div class="flex flex-wrap text-center items-center justify-center gap-4 w-full">
           <span class="font-medium text-xl text-zinc-200">I'm from</span>
-          <input class="appearance-none text-center border-b border-zinc-800 bg-zinc-950 max-w-60 w-full py-2 px-3 text-zinc-200" id="city" type="text" placeholder="City" />
+          <input class="appearance-none text-center border-b border-zinc-800 bg-zinc-950 max-w-80 w-full py-2 px-3 text-zinc-200" id="city" type="text" placeholder="City" />
         </div>
       </div>
 
       <div class="flex flex-wrap text-center items-center justify-center gap-4 w-full">
         <span class="font-medium text-xl text-zinc-200">I would like to talk about</span>
-        <div class="relative w-full max-w-60">
+        <div class="relative w-full max-w-40">
           <select class="appearance-none text-center border-b border-zinc-800 bg-zinc-950 w-full py-2 px-3 text-zinc-200" id="subject">
             <option value="Budget">Budget</option>
             <option value="New project">New project</option>
@@ -346,8 +346,6 @@ const iconMap = {
       }
     </div>
   </div>
-
-
 </Layout>
 
 <script>

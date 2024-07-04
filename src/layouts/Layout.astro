@@ -30,8 +30,13 @@ import '@fontsource/geist-mono';
     <meta property="twitter:description" content="I have more than 15 years of experience as a Front-End Developer, focused on UI/UX. Passionate about creating beautiful and functional interfaces. Crazy about JavaScript and CSS, especially in animations that make user interaction better." />
     <meta property="twitter:image" content="https://gus.vision/gus.webp" />
   </head>
-  <body class="w-full content p-2 md:p-4 lg:p-10 flex flex-col gap-4 md:gap-10 bg-zinc-950 relative mb-20 md:mb-0" id="about">
-    <slot />
+  <body class="w-full content bg-zinc-950">
+    <div class="p-2 md:p-4 lg:p-10 flex flex-col gap-4 md:gap-10 relative mb-20 md:mb-0" id="about">
+      <slot />
+    </div>
+    <div class="bg-zinc-900/50 border-t border-zinc-800 px-8 w-full text-center min-h-16 flex justify-center items-center">
+      <div class="text-zinc-500 text-xs">Developed by <a href="https://github.com/gustavoquinalha" target="_blank" class="text-zinc-300 hover:text-zinc-50 hover:underline underline-offset-1">Gustavo Quinalha</a>, <a href="https://github.com/gustavoquinalha" target="_blank" class="text-zinc-300 hover:text-zinc-50 hover:underline underline-offset-1">Click here</a> to fork!</div>
+    </div>
   </body>
 </html>
 <style is:global>

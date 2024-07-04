@@ -1,5 +1,10 @@
 ---
 import '@fontsource/geist-mono';
+const title = 'Gustavo Quinalha';
+const subtitle = 'Software Engineer & UI/UX Designer';
+const description = 'I have more than 15 years of experience as a Front-End Developer, focused on UI/UX. Passionate about creating beautiful and functional interfaces. Crazy about JavaScript and CSS, especially in animations that make user interaction better.';
+const url = 'https://gus.vision/';
+const image = 'https://gus.vision/gus.webp';
 ---
 
 <!doctype html>
@@ -9,33 +14,33 @@ import '@fontsource/geist-mono';
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
-    <title>Gustavo Quinalha - Software Engineer & UI/UX Designer</title>
+    <title>{title} - {subtitle}</title>
 
-    <meta name="title" content="Gustavo Quinalha - Software Engineer & UI/UX Designer" />
-    <meta name="description" content="I have more than 15 years of experience as a Front-End Developer, focused on UI/UX. Passionate about creating beautiful and functional interfaces. Crazy about JavaScript and CSS, especially in animations that make user interaction better." />
+    <meta name="title" content=`${title} - ${subtitle}` />
+    <meta name="description" content={description} />
     <meta name="theme-color" content="#09090b" />
     <meta name="color-scheme" content="dark" />
     <!-- Open Graph / Facebook -->
-    <meta property="og:title" content="Gustavo Quinalha - Software Engineer & UI/UX Designer" />
-    <meta property="og:description" content="I have more than 15 years of experience as a Front-End Developer, focused on UI/UX. Passionate about creating beautiful and functional interfaces. Crazy about JavaScript and CSS, especially in animations that make user interaction better." />
+    <meta property="og:title" content=`${title} - ${subtitle}` />
+    <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:image:alt" content="Gus logo" />
-    <meta property="og:image" content="https://gus.vision/gus.webp" />
-    <meta property="og:url" content="https://gus.vision/" />
-    <meta property="fb:app_id" content="739468404727575" />
+    <meta property="og:image:alt" content=`${title} - ${subtitle}` />
+    <meta property="og:image" content={image} />
+    <meta property="og:url" content={url} />
+    <meta property="fb:app_id" content="" />
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://gus.vision/" />
-    <meta property="twitter:title" content="Gustavo Quinalha - Software Engineer & UI/UX Designer" />
-    <meta property="twitter:description" content="I have more than 15 years of experience as a Front-End Developer, focused on UI/UX. Passionate about creating beautiful and functional interfaces. Crazy about JavaScript and CSS, especially in animations that make user interaction better." />
-    <meta property="twitter:image" content="https://gus.vision/gus.webp" />
+    <meta property="twitter:url" content={url} />
+    <meta property="twitter:title" content=`${title} - ${subtitle}` />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={image} />
   </head>
-  <body class="w-full content bg-zinc-950">
+  <body class="w-full content bg-zinc-950 mb-14 md:mb-0">
     <div class="p-2 md:p-4 lg:p-10 flex flex-col gap-4 md:gap-10 relative mb-20 md:mb-0" id="about">
       <slot />
     </div>
     <div class="bg-zinc-900/50 border-t border-zinc-800 px-8 w-full text-center min-h-16 flex justify-center items-center">
-      <div class="text-zinc-500 text-xs">Developed by <a href="https://github.com/gustavoquinalha" target="_blank" class="text-zinc-300 hover:text-zinc-50 hover:underline underline-offset-1">Gustavo Quinalha</a>, <a href="https://github.com/gustavoquinalha" target="_blank" class="text-zinc-300 hover:text-zinc-50 hover:underline underline-offset-1">Click here</a> to fork!</div>
+      <div class="text-zinc-500 text-xs">Developed by <a href="https://github.com/gustavoquinalha" target="_blank" class="text-zinc-300 hover:text-zinc-50 hover:underline underline-offset-1">Gustavo Quinalha</a>, <a href="https://github.com/gustavoquinalha/gustavoquinalha.github.io/fork" target="_blank" class="text-zinc-300 hover:text-zinc-50 hover:underline underline-offset-1">Click here</a> to fork!</div>
     </div>
   </body>
 </html>

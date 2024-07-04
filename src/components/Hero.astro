@@ -5,26 +5,32 @@ const socialMedia = [
   {
     link: 'https://www.linkedin.com/in/gustavoquinalha/',
     icon: 'LinkedinIcon',
+    name: 'Linkedin',
   },
   {
     link: 'https://github.com/gustavoquinalha',
     icon: 'GithubIcon',
+    name: 'Github',
   },
   {
     link: 'https://codepen.com/gustavoquinalha',
     icon: 'CodepenIcon',
+    name: 'Codepen',
   },
   {
     link: 'https://dribbble.com/gustavoquinalha',
     icon: 'DribbbleIcon',
+    name: 'Dribbble',
   },
   {
     link: 'https://instagram.com/gustavoquinalha',
     icon: 'InstagramIcon',
+    name: 'Instagram',
   },
   {
     link: 'https://twitter.com/gustavoquinalha',
     icon: 'TwitterIcon',
+    name: 'Twitter',
   },
 ] as const;
 
@@ -65,10 +71,10 @@ const iconMap = {
 
   <div class="flex flex-wrap justify-center items-center gap-2 pt-4">
     {
-      socialMedia.map(({ link, icon }) => {
+      socialMedia.map(({ link, icon, name }) => {
         const IconComponent = iconMap[icon];
         return (
-          <a href={link} target="_blank" class="bg-zinc-900 shadow border border-zinc-800 hover:border-zinc-700 hover:bg-zinc-800 text-zinc-300 hover:text-zinc-50 rounded-xl h-10 w-10 min-w-10 text-sm flex items-center justify-center gap-2">
+          <a href={link} target="_blank" title={name} class="bg-zinc-900 shadow border border-zinc-800 hover:border-zinc-700 hover:bg-zinc-800 text-zinc-300 hover:text-zinc-50 rounded-xl h-10 w-10 min-w-10 text-sm flex items-center justify-center gap-2">
             <IconComponent size={20} strokeWidth={1} />
           </a>
         );

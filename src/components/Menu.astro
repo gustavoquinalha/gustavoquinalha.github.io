@@ -3,16 +3,26 @@ import { GithubIcon } from 'astro-feather';
 ---
 
 <div class="max-w-full w-full left-0 md:left-auto md:w-auto fixed md:sticky bottom-0 md:bottom-[initial] top-[initial] md:top-4 z-50 flex items-center gap-2 mx-auto" id="menu">
-  <div class="bg-zinc-900 shadow border border-zinc-800 rounded-none md:rounded-xl flex items-center text-center h-14 md:h-10 px-4 overflow-x-auto overflow-y-hidden w-full md:w-auto">
-    <a href="#about" class="text-zinc-400 hover:text-zinc-50 h-10 text-sm px-3 md:px-5 py-3 flex items-center justify-center">About</a>
-    <a href="#skills" class="text-zinc-400 hover:text-zinc-50 h-10 text-sm px-3 md:px-5 py-3 flex items-center justify-center">Skills</a>
-    <a href="#career" class="text-zinc-400 hover:text-zinc-50 h-10 text-sm px-3 md:px-5 py-3 flex items-center justify-center">Career</a>
-    <a href="#projects" class="text-zinc-400 hover:text-zinc-50 h-10 text-sm px-3 md:px-5 py-3 flex items-center justify-center">Projects</a>
-    <a href="#products" class="text-zinc-400 hover:text-zinc-50 h-10 text-sm px-3 md:px-5 py-3 flex items-center justify-center">Products</a>
-    <a href="#contact" class="text-zinc-400 hover:text-zinc-50 h-10 text-sm px-3 md:px-5 py-3 flex items-center justify-center">Contact</a>
-  </div>
+  <div class="bg-zinc-900 shadow border border-zinc-800 rounded-none md:rounded-xl flex items-center text-center h-14 md:h-10 px-2 overflow-x-auto overflow-y-hidden w-full md:w-auto" id="menu-items"></div>
   <a href="https://github.com/gustavoquinalha/gustavoquinalha.github.io/fork" target="_blank" title="Fork me!" class="hidden md:flex whitespace-nowrap bg-zinc-900 shadow border border-zinc-800 hover:border-zinc-700 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-50 rounded-xl h-10 px-4 text-sm items-center justify-center gap-2">
     <GithubIcon size={20} strokeWidth={1} />
     <span class="">Fork me!</span>
   </a>
 </div>
+
+<script>
+  const menu: any[] = [];
+  const items: HTMLElement[] = Array.from(document.querySelectorAll('.title'));
+  const menuItems: HTMLElement = document.querySelector('#menu-items')!;
+
+  menu.push('<a href="#about-me" class="text-zinc-400 hover:text-zinc-50 h-10 text-sm px-3 md:px-4 py-3 flex items-center justify-center">About me</a>');
+
+  items.forEach((item) => {
+    const link = `<a href="#${item.textContent?.toLowerCase().replace(' ', '-')}" class="text-zinc-400 hover:text-zinc-50 h-10 text-sm px-3 md:px-4 py-3 flex items-center justify-center">${item.textContent}</a>`;
+    menu.push(link);
+  });
+
+  menu.push('<a href="#contact" class="text-zinc-400 hover:text-zinc-50 h-10 text-sm px-3 md:px-4 py-3 flex items-center justify-center">Contact</a>');
+
+  menuItems.innerHTML = menu.toString().split(',').join('');
+</script>

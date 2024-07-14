@@ -7,18 +7,18 @@ import { SendIcon } from 'astro-feather';
     <div class="w-full flex flex-col items-center justify-center gap-2">
       <div class="flex flex-wrap text-center items-center justify-center gap-4 w-full">
         <label for="name" class="font-medium text-xl text-black dark:text-zinc-200">Hello, my name is</label>
-        <input id="name" name="name" type="text" placeholder="Name" required class="appearance-none placeholder:text-zinc-500 dark:placeholder:text-zinc-600 text-center focus:bg-white focus:border-zinc-200 focus:outline-none focus:shadow-outline border-b border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 max-w-60 w-full py-2 px-3 text-black dark:text-zinc-200" />
+        <input id="name" name="name" type="text" placeholder="Name" required class="appearance-none placeholder:text-zinc-500 dark:placeholder:text-zinc-600 text-center focus:bg-white dark:focus:bg-zinc-950 focus:border-zinc-200 focus:outline-none focus:shadow-outline border-b border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 max-w-60 w-full py-2 px-3 text-black dark:text-zinc-200" />
       </div>
       <div class="flex flex-wrap text-center items-center justify-center gap-4 w-full">
         <label for="city" class="font-medium text-xl text-black dark:text-zinc-200">I'm from</label>
-        <input id="city" name="city" type="text" placeholder="City" required class="appearance-none placeholder:text-zinc-500 dark:placeholder:text-zinc-600 text-center focus:bg-white focus:border-zinc-200 focus:outline-none focus:shadow-outline border-b border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 max-w-60 w-full py-2 px-3 text-black dark:text-zinc-200" />
+        <input id="city" name="city" type="text" placeholder="City" required class="appearance-none placeholder:text-zinc-500 dark:placeholder:text-zinc-600 text-center focus:bg-white dark:focus:bg-zinc-950 focus:border-zinc-200 focus:outline-none focus:shadow-outline border-b border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 max-w-60 w-full py-2 px-3 text-black dark:text-zinc-200" />
       </div>
     </div>
 
     <div class="flex flex-wrap text-center items-center justify-center gap-4 w-full">
       <label for="subject" class="font-medium text-xl text-black dark:text-zinc-200">I would like to talk about</label>
       <div class="relative w-full max-w-40">
-        <select id="subject" name="subject" required class="appearance-none placeholder:text-zinc-500 dark:placeholder:text-zinc-600 text-center focus:bg-white focus:border-zinc-200 focus:outline-none focus:shadow-outline border-b border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 max-w-60 w-full py-2 px-3">
+        <select id="subject" name="subject" required class="appearance-none placeholder:text-zinc-500 dark:placeholder:text-zinc-600 text-center focus:bg-white dark:focus:bg-zinc-950 focus:border-zinc-200 focus:outline-none focus:shadow-outline border-b border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 max-w-60 w-full py-2 px-3">
           <option value="Budget">Budget</option>
           <option value="New project">New project</option>
           <option value="Doubts">Doubts</option>
@@ -32,9 +32,8 @@ import { SendIcon } from 'astro-feather';
       </div>
     </div>
 
-    <div class="flex flex-col items-center justify-center gap-4 w-full max-w-xl mx-auto">
-      <label for="message" class="invisible font-medium text-xl text-black dark:text-zinc-200">I would like to talk about</label>
-      <textarea required name="message" placeholder="Message" id="message" rows="4" class="resize-none appearance-none placeholder:text-zinc-500 dark:placeholder:text-zinc-600 text-center focus:bg-white focus:border-zinc-200 focus:outline-none focus:shadow-outline rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 w-full py-2 px-3 text-black dark:text-zinc-200"></textarea>
+    <div class="flex flex-col items-center justify-center gap-4 w-full max-w-xl mx-auto mt-4">
+      <textarea required name="message" placeholder="Message" id="message" rows="4" class="resize-none appearance-none placeholder:text-zinc-500 dark:placeholder:text-zinc-600 text-center focus:bg-white dark:focus:bg-zinc-950 focus:border-zinc-200 focus:outline-none focus:shadow-outline rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 w-full py-2 px-3 text-black dark:text-zinc-200"></textarea>
     </div>
 
     <div class="w-full mt-4">

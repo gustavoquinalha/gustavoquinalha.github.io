@@ -9,19 +9,19 @@ const { items } = Astro.props as Props;
 ---
 
 <div class="w-full pt-20" id="projects">
-  <span class="title block font-medium text-xl text-zinc-200 mb-4">Projects</span>
+  <span class="title block font-medium text-xl text-black dark:text-zinc-200 mb-4">Projects</span>
   <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 flex-col gap-4">
     {
       items.map((data) => (
-        <a href={data.link} target="_blank" class="group shadow w-full flex flex-col gap-4 py-4 md:py-8 px-4 md:px-6 border bg-zinc-900 border-zinc-800 hover:bg-zinc-800 hover:border-zinc-700 rounded-xl relative">
+        <a href={data.link} target="_blank" class="group dark:shadow w-full flex flex-col gap-4 py-4 md:py-8 px-4 md:px-6 border bg-white dark:bg-zinc-900 border-zinc-200 dark:border-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-700 rounded-xl relative">
           <div class="absolute top-0 right-0 p-2">
             <ExternalLinkIcon size={20} strokeWidth={1} />
           </div>
           <div class="flex flex-col w-full gap-1">
-            <div class="block font-medium text-lg text-zinc-200 group-hover:text-zinc-50 group-hover:underline underline-offset-1 leading-5">{data.name}</div>
-            <div class="block font-medium text-sm text-zinc-400 gap-2 leading-4">{data.title}</div>
+            <div class="block font-medium text-lg text-black dark:text-zinc-200 group-hover:text-black dark:group-hover:text-white group-hover:underline underline-offset-1 leading-5">{data.name}</div>
+            <div class="block font-medium text-sm text-white0 dark:text-white0 gap-2 leading-4">{data.title}</div>
           </div>
-          <div class="block font-medium text-sm leading-5 text-zinc-300 mt-2">{data.description}</div>
+          <div class="block font-medium text-sm leading-5 text-zinc-600 dark:text-zinc-400 mt-2">{data.description}</div>
         </a>
       ))
     }

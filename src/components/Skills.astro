@@ -7,8 +7,8 @@ const { items } = Astro.props as Props;
 ---
 
 <div class="w-full pt-20" id="skills">
-  <span class="title block font-medium text-xl text-zinc-200 mb-4">Skills</span>
-  <div class="w-full flex flex-wrap gap-1">
-    {items.map((skill) => <div class="bg-zinc-800 text-zinc-300 text-xs inline-block rounded-lg px-2 py-1 leading-none">{skill}</div>)}
+  <span class="title block font-medium text-xl text-black dark:text-zinc-200 mb-4">Skills</span>
+  <div class="w-full flex flex-wrap gap-1.5">
+    {items.map((skill) => <div class="bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-300 text-xs inline-block rounded-lg px-2 py-1 leading-none">{skill}</div>)}
   </div>
 </div>

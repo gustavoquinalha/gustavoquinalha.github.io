@@ -28,16 +28,16 @@ const image = 'https://gus.vision/gus.webp';
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href=`${url}favicon.ico` />
-    <meta name="robots" content="index, follow">
-    <meta name="googlebots" content="index, follow">
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebots" content="index, follow" />
     <meta name="generator" content={Astro.generator} />
     <title>{title} - {subtitle}</title>
     <meta name="title" content=`${title} - ${subtitle}` />
-    <link rel="canonical" href={url}>
+    <link rel="canonical" href={url} />
     <meta name="description" content={description} />
     <meta name="theme-color" content="#09090b" />
-    <meta name="color-scheme" content="dark" />
-    <meta name="author" content={title}>
+    <!-- <meta name="color-scheme" content="dark" /> -->
+    <meta name="author" content={title} />
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content=`${title} - ${subtitle}` />
     <meta property="og:description" content={description} />
@@ -46,7 +46,7 @@ const image = 'https://gus.vision/gus.webp';
     <meta property="og:image" content={image} />
     <meta property="og:url" content={url} />
     <meta property="fb:app_id" content="" />
-    <meta property="og:locale" content="pt-BR">
+    <meta property="og:locale" content="pt-BR" />
     <!-- Twitter -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@gustavoquinalha" />
@@ -56,7 +56,7 @@ const image = 'https://gus.vision/gus.webp';
     <meta name="twitter:image" content={image} />
     <meta name="twitter:image:alt" content={title} />
   </head>
-  <body class="w-full content bg-zinc-950 mb-14 md:mb-0">
+  <body class="w-full content bg-white dark:bg-zinc-950 mb-14 md:mb-0 transition-colors">
     <!-- Google Tag Manager (noscript) -->
     <noscript>
       <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PFVLN9XH" height="0" width="0" style="display:none;visibility:hidden"> </iframe>
@@ -65,14 +65,25 @@ const image = 'https://gus.vision/gus.webp';
     <div class="p-2 md:p-4 lg:p-10 flex flex-col gap-4 md:gap-10 relative mb-20 md:mb-0" id="about-me">
       <slot />
     </div>
-    <div class="bg-zinc-900/50 border-t border-zinc-800 p-4 w-full text-center flex justify-center items-center">
-      <div class="text-zinc-400 text-xs">Developed by <a href="https://github.com/gustavoquinalha" target="_blank" class="hover:text-zinc-50 hover:underline underline-offset-1">Gustavo Quinalha</a>, <a href="https://github.com/gustavoquinalha/gustavoquinalha.github.io/fork" title="Click here to fork!" target="_blank" class="hover:text-zinc-50 hover:underline underline-offset-1">Click here to fork!</a></div>
+    <div class="bg-zinc-100 dark:bg-zinc-900/50 border-t border-zinc-200 dark:border-zinc-800 p-4 w-full text-center flex justify-center items-center">
+      <div class="text-zinc-600 dark:text-zinc-400 text-xs">Developed by <a href="https://github.com/gustavoquinalha" target="_blank" class="hover:text-black dark:hover:text-white hover:underline underline-offset-1">Gustavo Quinalha</a>, <a href="https://github.com/gustavoquinalha/gustavoquinalha.github.io/fork" title="Click here to fork!" target="_blank" class="hover:text-black dark:hover:text-white hover:underline underline-offset-1">Click here to fork!</a></div>
     </div>
   </body>
 </html>
+
 <style is:global>
   :root {
     color-scheme: dark;
+  }
+  .light {
+    color-scheme: light;
+  }
+
+  .light .sun {
+    display: none;
+  }
+  .dark .moon {
+    display: none;
   }
 
   * {

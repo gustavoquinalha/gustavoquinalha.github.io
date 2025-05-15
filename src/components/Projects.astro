@@ -10,10 +10,10 @@ const { items } = Astro.props as Props;
 
 <div class="w-full pt-20" id="projects">
   <span class="title block font-medium text-xl text-black dark:text-zinc-200 mb-4">Projects</span>
-  <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 flex-col gap-4">
+  <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-stretch">
     {
       items.map((data) => (
-        <a href={data.link} target="_blank" class="group dark:shadow w-full flex flex-col gap-4 py-4 md:py-8 px-4 md:px-6 border bg-white dark:bg-zinc-900 border-zinc-200 dark:border-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-700 rounded-xl relative">
+        <a href={data.link} target="_blank" class="h-full min-h-80 group dark:shadow w-full flex flex-col gap-4 py-4 md:py-8 px-4 md:px-6 border bg-white dark:bg-zinc-900 border-zinc-200 dark:border-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-700 rounded-xl relative">
           <div class="absolute top-0 right-0 p-2">
             <ExternalLinkIcon size={20} strokeWidth={1} />
           </div>

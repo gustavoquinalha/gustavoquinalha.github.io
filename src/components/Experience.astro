@@ -10,8 +10,8 @@ const { items } = Astro.props as Props;
   <span class="title block font-medium text-xl text-black dark:text-zinc-200 mb-4">Experience</span>
   {
     items.map((data) => (
-      <div class="w-full flex flex-col gap-1 pl-8 pb-14 last:pb-0 border-l last:border-transparent border-zinc-200 dark:border-zinc-500 relative">
-        <div class="flex w-4 min-w-4 h-4 bg-zinc-200 dark:bg-white0 rounded-full absolute -left-2" />
+      <div class="w-full flex flex-col gap-1 pl-8 pb-14 last:pb-0 border-l last:border-transparent border-zinc-200 dark:border-zinc-800 relative">
+        <div class="flex w-4 min-w-4 h-4 bg-zinc-200 dark:bg-zinc-800 rounded-full absolute -left-2" />
         <span class="block text-xs text-zinc-500 dark:text-zinc-400">{data.date}</span>
         <span class="text-lg text-black dark:text-zinc-200">{data.title}</span>
         <a href={data.link} target="_blank" class="inline text-sm text-black dark:text-zinc-200 hover:text-black dark:hover:text-white hover:underline underline-offset-1">
